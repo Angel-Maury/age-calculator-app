@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>Age calculator app</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- FECHAS -->
+    <div class="fechas">
+      <label for="dia" class="a dia">
+        <h3>D I A</h3>
+      </label>
+      <label for="mes" class="a mes">
+        <h3>M E S</h3>
+      </label>
+      <label for="año" class="a año">
+        <h3>A Ñ O</h3>
+      </label>
+      <!-- INPUTS -->
+      <div class="inputs">
+        <input class="input1" type="number" name="dia" id="dia" placeholder="DD" min=1 max=31 maxlength="2" value="">
+        <p class="input-text-error input-text-error-dias">numero de dias 1-31</p>
+        <input class="input2" type="number" name="mes" id="mes" placeholder="MM" min=1 max=12 maxlength="2" value="">
+        <p class="input-text-error input-text-error-meses">numero de meses 1-12</p>
+        <input class="input3" type="number" name="año" id="año" placeholder="YYYY" min="1" maxlength="4" max="9"
+          value="">
+        <p class="input-text-error input-text-error-años">numero de años 1-2023</p>
+      </div>
+      <!-- BTN CALCULAR -->
+      <button type="submit" class="btn" id="btnCal">CALCULAR</button>
+      <!-- resultado -->
+      <div class="resultado">
+        <p> <b id="rayitas_años"> -- </b> AÑOS</p>
+        <p> <b id="rayitas_meses"> -- </b> MESES</p>
+        <p> <b id="rayitas_dias"> --</b> DIAS </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

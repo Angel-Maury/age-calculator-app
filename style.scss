@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+    width: auto;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+
+    /*     .flecha {
+        background-color: purple;
+        height: 50px;
+    } */
+
+    .fechas {
+        flex-wrap: wrap;
+        text-align: center;
+
+        .a {
+            font-size: 1.6rem;
+            flex-wrap: wrap;
+            display: inline-flex;
+            padding-right: 40px;
+            padding-left: 40px;
+            padding-top: 20px;
+            color: #333;
+            cursor: pointer;
+
+            &:hover {
+                color: purple;
+            }
+        }
+    }
+
+
+    .inputs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "input1 input2 input3"
+            "texterror1 texterror2 texterror3"
+            "btn btn btn";
+
+        .input-text-error {
+            color: red;
+            font-size: 1.6rem;
+            display: none;
+            font-weight: 700;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .input-error {
+            width: 80px;
+            background-color: transparent;
+            border: 0.5px solid red;
+            border-radius: 5%;
+            padding: 10px;
+            margin: 20px;
+
+            color: red;
+            font-weight: 800;
+
+            &:hover {
+                border: solid 0.5px red;
+
+                &::placeholder {
+                    color: red;
+                }
+            }
+
+            &::placeholder {
+                font-weight: 800;
+                font-size: 1.3rem;
+            }
+        }
+
+        .shake-horizontal {
+            animation: shake-horizontal 0.5s linear both
+        }
+
+        @keyframes shake-horizontal {
+
+            0%,
+            100% {
+                transform: translateX(0)
+            }
+
+            10%,
+            30%,
+            50%,
+            70% {
+                transform: translateX(-10px)
+            }
+
+            20%,
+            40%,
+            60% {
+                transform: translateX(10px)
+            }
+
+            80% {
+                transform: translateX(8px)
+            }
+
+            90% {
+                transform: translateX(-8px)
+            }
+        }
+
+        .input-text-error-dias {
+            grid-area: texterror1;
+        }
+
+        .input-text-error-meses {
+            grid-area: texterror2;
+        }
+
+        .input-text-error-años {
+            grid-area: texterror3;
+        }
+
+        .input {
+            width: 80px;
+            background-color: transparent;
+            border: 0.5px solid black;
+            border-radius: 5%;
+            padding: 10px;
+            margin: 20px;
+
+            color: black;
+            font-weight: 800;
+
+            &:hover {
+                border: solid 0.5px purple;
+
+                &::placeholder {
+                    color: purple;
+                }
+            }
+
+            &::placeholder {
+                font-weight: 800;
+                font-size: 1.3rem;
+            }
+        }
+
+        .input1 {
+            grid-area: input1;
+            @extend .input;
+        }
+
+        .input2 {
+            grid-area: input2;
+            @extend .input
+        }
+
+        .input3 {
+            grid-area: input3;
+            @extend .input
+        }
+    }
+
+    .btn {
+        grid-area: btn;
+        background-color: transparent;
+        border: solid 1px black;
+        padding: 5px;
+        font-family: 'Poppins';
+        font-weight: 800;
+        border-radius: 5%;
+        margin-top: 20px;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: purple;
+            transform: scale(1.1);
+            transition: all 0.5s;
+            border: transparent;
+            color: #eee;
+            box-shadow: -1px 7px 24px 1px rgba(0, 0, 0, 0.75);
+            transition-delay: 0.01s;
+        }
+    }
+
+    .resultado {
+        font-size: 4rem;
+        font-weight: 700;
+        text-align: start;
+        padding-top: 40px;
+        padding-right: 20px;
+
+        b {
+            color: purple;
+        }
+    }
+}
