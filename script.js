@@ -115,7 +115,7 @@ const btnCalcular = document.getElementById('btnCal');
 
 function calcular (){
     if(campos.dia === undefined || campos.mes === undefined || campos.año === undefined ||
-        campos.dia === Number || campos.mes === undefined || campos.año === undefined||campos.dia === undefined || campos.mes === Number || campos.año === undefined||campos.dia === undefined || campos.mes === undefined || campos.año === Number){
+        campos.dia === Number || campos.mes === undefined || campos.año === undefined|| campos.dia === undefined || campos.mes === Number || campos.año === undefined||campos.dia === undefined || campos.mes === undefined || campos.año === Number){
         textBotonError.classList.remove('desactive');
 
         inputDia.classList.add('input-error');
