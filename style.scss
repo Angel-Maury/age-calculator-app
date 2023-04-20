@@ -20,11 +20,6 @@ body {
     height: 100vh;
     justify-content: center;
 
-    /*     .flecha {
-        background-color: purple;
-        height: 50px;
-    } */
-
     .fechas {
         flex-wrap: wrap;
         text-align: center;
@@ -69,7 +64,7 @@ body {
         .input-error {
             width: 80px;
             background-color: transparent;
-            border: 0.5px solid red;
+            border: 2px solid rgb(255, 0, 0);
             border-radius: 5%;
             padding: 10px;
             margin: 20px;
@@ -79,20 +74,17 @@ body {
 
             &:hover {
                 border: solid 0.5px red;
-
-                &::placeholder {
-                    color: red;
-                }
             }
 
             &::placeholder {
                 font-weight: 800;
                 font-size: 1.3rem;
+                color: red;
             }
         }
 
         .shake-horizontal {
-            animation: shake-horizontal 0.5s linear both
+            animation: shake-horizontal 0.5s linear both;
         }
 
         @keyframes shake-horizontal {
@@ -178,8 +170,8 @@ body {
     }
 
     .btn {
-        grid-area: btn;
         background-color: transparent;
+        max-width: 120px;
         border: solid 1px black;
         padding: 5px;
         font-family: 'Poppins';
@@ -198,6 +190,17 @@ body {
             box-shadow: -1px 7px 24px 1px rgba(0, 0, 0, 0.75);
             transition-delay: 0.01s;
         }
+    }
+
+    .desactive {
+        display: none;
+    }
+
+    .text-error-btn {
+        color: red;
+        font-weight: 800;
+        font-size: 1.8rem;
+        padding-top: 25px;
     }
 
     .resultado {

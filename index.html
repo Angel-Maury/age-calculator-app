@@ -30,14 +30,17 @@
       <div class="inputs">
         <input class="input1" type="number" name="dia" id="dia" placeholder="DD" min=1 max=31 maxlength="2" value="">
         <p class="input-text-error input-text-error-dias">numero de dias 1-31</p>
+        <p class="input-text-error input-text-error-dias30">numero de dias 1-30</p>
         <input class="input2" type="number" name="mes" id="mes" placeholder="MM" min=1 max=12 maxlength="2" value="">
         <p class="input-text-error input-text-error-meses">numero de meses 1-12</p>
+        <p class="input-text-error input-text-error-meses30">este mes solo tiene 30 dias</p>
         <input class="input3" type="number" name="año" id="año" placeholder="YYYY" min="1" maxlength="4" max="9"
           value="">
         <p class="input-text-error input-text-error-años">numero de años 1-2023</p>
       </div>
       <!-- BTN CALCULAR -->
       <button type="submit" class="btn" id="btnCal">CALCULAR</button>
+      <p class="text-error-btn desactive" id="textBtnError">Completa Los Campos!</p>
       <!-- resultado -->
       <div class="resultado">
         <p> <b id="rayitas_años"> -- </b> AÑOS</p>
